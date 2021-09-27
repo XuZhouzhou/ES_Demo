@@ -1,0 +1,25 @@
+package main.java.org.xzz.esdemo;
+
+import org.apache.http.HttpHost;
+import org.elasticsearch.client.RestClient;
+import org.elasticsearch.client.RestHighLevelClient;
+
+import java.io.IOException;
+
+public class ES_Client_Util {
+    private static String ip="localhost";
+    private static int port=9200;
+    private static String reastType="http";
+    public static RestHighLevelClient getESClient() {
+        RestHighLevelClient client = new RestHighLevelClient(RestClient.builder(new HttpHost(ip, 9200, reastType)));
+        return  client;
+    }
+    public static void  close( RestHighLevelClient client ){
+        try {
+            client.close();
+        } catch (IOException e) {
+            //异常抛出 流关闭
+            e.printStackTrace();
+        }
+    }
+}
