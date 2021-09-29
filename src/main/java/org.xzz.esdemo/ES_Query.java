@@ -216,8 +216,9 @@ public class ES_Query {
 
         SearchSourceBuilder builder = new SearchSourceBuilder();
         //wildcardQuery 通配符查询 * ？ prefixQuery 前缀查询   fuzzyQuery 左右模糊查询
-        builder.query(QueryBuilders.wildcardQuery("name", "鲜*"));
-
+        builder.query(QueryBuilders.wildcardQuery("name", "*于*"));
+        builder.from(0);
+        builder.size(2000);
         request.source(builder);
         SearchResponse response = null;
         try {
