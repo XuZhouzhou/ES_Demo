@@ -1,4 +1,4 @@
-package main.java.org.xzz.esdemo;
+package main.java.org.xzz.esdemo.util;
 
 import org.apache.http.HttpHost;
 import org.elasticsearch.client.RestClient;

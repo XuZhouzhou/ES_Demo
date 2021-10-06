@@ -1,5 +1,6 @@
 package main.java.org.xzz.esdemo;
 
+import main.java.org.xzz.esdemo.util.ES_Client_Util;
 import org.elasticsearch.action.search.SearchRequest;
 import org.elasticsearch.action.search.SearchResponse;
 import org.elasticsearch.client.RequestOptions;

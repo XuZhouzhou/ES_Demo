@@ -1,4 +1,4 @@
-package main.java.org.xzz.esdemo;
+package main.java.org.xzz.esdemo.util;
 
 import java.io.UnsupportedEncodingException;
 import java.util.Random;

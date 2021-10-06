@@ -1,5 +1,6 @@
 package main.java.org.xzz.esdemo;
 
+import main.java.org.xzz.esdemo.util.ES_Client_Util;
 import org.elasticsearch.action.admin.indices.create.CreateIndexRequest;
 import org.elasticsearch.action.admin.indices.create.CreateIndexResponse;
 import org.elasticsearch.client.RequestOptions;
@@ -10,7 +11,7 @@ import java.io.IOException;
 public class ES_Creat_Index {
     public static void main(String[] args) {
         //获取es客户端
-        RestHighLevelClient esClient=ES_Client_Util.getESClient();
+        RestHighLevelClient esClient= ES_Client_Util.getESClient();
         //创建索引
         CreateIndexRequest request = new CreateIndexRequest("user");
 
