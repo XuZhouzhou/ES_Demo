@@ -21,7 +21,7 @@ public class ES_Insert {
         try {
             for (int i = 0; i <= 10; i++) {
                 //插入50条数据
-                IndexRequest indexRequest=new IndexRequest("user");
+                IndexRequest indexRequest=new IndexRequest();
                 indexRequest.index("user").id(UserUtil.getfourNum());
                 user = new User();
                 user.setName(UserUtil.getChineseName());
