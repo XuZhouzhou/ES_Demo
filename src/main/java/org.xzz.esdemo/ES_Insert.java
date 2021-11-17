@@ -2,13 +2,13 @@ package org.xzz.esdemo;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import main.java.org.xzz.esdemo.util.ES_Client_Util;
-import main.java.org.xzz.esdemo.util.UserUtil;
 import org.elasticsearch.action.index.IndexRequest;
 import org.elasticsearch.action.index.IndexResponse;
 import org.elasticsearch.client.RequestOptions;
 import org.elasticsearch.client.RestHighLevelClient;
 import org.elasticsearch.common.xcontent.XContentType;
+import org.xzz.esdemo.util.ES_Client_Util;
+import org.xzz.esdemo.util.UserUtil;
 
 import java.io.IOException;
 

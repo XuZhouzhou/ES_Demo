@@ -1,10 +1,11 @@
 package org.xzz.esdemo;
 
-import main.java.org.xzz.esdemo.util.ES_Client_Util;
+
 import org.elasticsearch.client.RequestOptions;
 import org.elasticsearch.client.RestHighLevelClient;
 import org.elasticsearch.client.indices.GetIndexRequest;
 import org.elasticsearch.client.indices.GetIndexResponse;
+import org.xzz.esdemo.util.ES_Client_Util;
 
 import java.io.IOException;
 

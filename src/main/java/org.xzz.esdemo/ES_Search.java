@@ -1,6 +1,6 @@
 package org.xzz.esdemo;
 
-import main.java.org.xzz.esdemo.util.ES_Client_Util;
+
 import org.elasticsearch.action.search.SearchRequest;
 import org.elasticsearch.action.search.SearchResponse;
 import org.elasticsearch.client.RequestOptions;
@@ -10,6 +10,8 @@ import org.elasticsearch.search.SearchHit;
 import org.elasticsearch.search.SearchHits;
 import org.elasticsearch.search.builder.SearchSourceBuilder;
 import org.elasticsearch.search.sort.SortOrder;
+import org.xzz.esdemo.util.ES_Client_Util;
+
 import java.io.IOException;
 import java.util.Iterator;
 

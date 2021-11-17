@@ -1,10 +1,11 @@
 package org.xzz.esdemo;
 
-import main.java.org.xzz.esdemo.util.ES_Client_Util;
+
 import org.elasticsearch.action.admin.indices.delete.DeleteIndexRequest;
 import org.elasticsearch.action.support.master.AcknowledgedResponse;
 import org.elasticsearch.client.RequestOptions;
 import org.elasticsearch.client.RestHighLevelClient;
+import org.xzz.esdemo.util.ES_Client_Util;
 
 import java.io.IOException;
 

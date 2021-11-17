@@ -1,11 +1,12 @@
 package org.xzz.esdemo;
 
-import main.java.org.xzz.esdemo.util.ES_Client_Util;
+
 import org.elasticsearch.action.bulk.BulkRequest;
 import org.elasticsearch.action.bulk.BulkResponse;
 import org.elasticsearch.action.delete.DeleteRequest;
 import org.elasticsearch.client.RequestOptions;
 import org.elasticsearch.client.RestHighLevelClient;
+import org.xzz.esdemo.util.ES_Client_Util;
 
 import java.io.IOException;
 
