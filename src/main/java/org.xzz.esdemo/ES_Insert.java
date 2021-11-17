@@ -27,6 +27,7 @@ public class ES_Insert {
                 user.setName(UserUtil.getChineseName());
                 user.setAge(UserUtil.getAge());
                 user.setSex(UserUtil.getSex());
+               // user.setAccountNumber("asdasdasdas");
                 String userJson = objectMapper.writeValueAsString(user);
                 indexRequest.source(userJson, XContentType.JSON);
                 IndexResponse response = esClient.index(indexRequest, RequestOptions.DEFAULT);

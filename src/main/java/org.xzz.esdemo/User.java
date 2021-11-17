@@ -4,6 +4,15 @@ public class User {
     private String name;
     private String sex;
     private Integer age;
+    private String accountNumber;
+    public String getAccountNumber() {
+        return accountNumber;
+    }
+
+    public void setAccountNumber(String accountNumber) {
+        this.accountNumber = accountNumber;
+    }
+
 
     public String getName() {
         return name;
