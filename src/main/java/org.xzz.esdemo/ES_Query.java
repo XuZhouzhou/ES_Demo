@@ -43,23 +43,23 @@ public class ES_Query {
 
 
         // 2. 条件查询 : termQuery
-//        SearchRequest request = new SearchRequest();
-//        request.indices("user");
-//        request.source(new SearchSourceBuilder().query(QueryBuilders.termQuery("age", 18)));
-//        SearchResponse response = null;
-//        try {
-//            response = esClient.search(request, RequestOptions.DEFAULT);
-//            SearchHits hits = response.getHits();
-//
-//            System.out.println(hits.getTotalHits());
-//            System.out.println(response.getTook());
-//
-//            for ( SearchHit hit : hits ) {
-//                System.out.println(hit.getSourceAsString());
-//            }
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
+        SearchRequest request = new SearchRequest();
+        request.indices("user");
+        request.source(new SearchSourceBuilder().query(QueryBuilders.termQuery("age", 20)));
+        SearchResponse response = null;
+        try {
+            response = esClient.search(request, RequestOptions.DEFAULT);
+            SearchHits hits = response.getHits();
+
+            System.out.println(hits.getTotalHits());
+            System.out.println(response.getTook());
+
+            for ( SearchHit hit : hits ) {
+                System.out.println(hit.getSourceAsString());
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
 
 
@@ -206,30 +206,30 @@ public class ES_Query {
 
 
 
-        // 8. 模糊查询
-        SearchRequest request = new SearchRequest();
-        request.indices("user");
-
-        SearchSourceBuilder builder = new SearchSourceBuilder();
-        //wildcardQuery 通配符查询 * ？ prefixQuery 前缀查询   fuzzyQuery 左右模糊查询
-        builder.query(QueryBuilders.wildcardQuery("name", "*于*"));
-        builder.from(0);
-        builder.size(2000);
-        request.source(builder);
-        SearchResponse response = null;
-        try {
-            response = esClient.search(request, RequestOptions.DEFAULT);
-            SearchHits hits = response.getHits();
-
-            System.out.println(hits.getTotalHits());
-            System.out.println(response.getTook());
-
-            for ( SearchHit hit : hits ) {
-                System.out.println(hit.getSourceAsString());
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+//        // 8. 模糊查询
+//        SearchRequest request = new SearchRequest();
+//        request.indices("user");
+//
+//        SearchSourceBuilder builder = new SearchSourceBuilder();
+//        //wildcardQuery 通配符查询 * ？ prefixQuery 前缀查询   fuzzyQuery 左右模糊查询
+//        builder.query(QueryBuilders.wildcardQuery("name", "*于*"));
+//        builder.from(0);
+//        builder.size(2000);
+//        request.source(builder);
+//        SearchResponse response = null;
+//        try {
+//            response = esClient.search(request, RequestOptions.DEFAULT);
+//            SearchHits hits = response.getHits();
+//
+//            System.out.println(hits.getTotalHits());
+//            System.out.println(response.getTook());
+//
+//            for ( SearchHit hit : hits ) {
+//                System.out.println(hit.getSourceAsString());
+//            }
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
 
 
 
