@@ -1,4 +1,4 @@
-package main.java.org.xzz.esdemo;
+package org.xzz.esdemo;
 
 import org.apache.http.HttpHost;
 import org.elasticsearch.action.admin.indices.create.CreateIndexRequest;

@@ -1,4 +1,4 @@
-package main.java.org.xzz.esdemo.util;
+package org.xzz.esdemo.util;
 
 public class PhoneUtil {
 

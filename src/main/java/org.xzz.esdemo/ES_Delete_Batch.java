@@ -1,4 +1,4 @@
-package main.java.org.xzz.esdemo;
+package org.xzz.esdemo;
 
 import main.java.org.xzz.esdemo.util.ES_Client_Util;
 import org.elasticsearch.action.bulk.BulkRequest;

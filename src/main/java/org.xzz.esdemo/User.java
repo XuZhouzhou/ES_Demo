@@ -1,4 +1,4 @@
-package main.java.org.xzz.esdemo;
+package org.xzz.esdemo;
 
 public class User {
     private String name;

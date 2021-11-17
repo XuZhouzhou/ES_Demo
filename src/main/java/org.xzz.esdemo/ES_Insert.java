@@ -1,4 +1,4 @@
-package main.java.org.xzz.esdemo;
+package org.xzz.esdemo;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
