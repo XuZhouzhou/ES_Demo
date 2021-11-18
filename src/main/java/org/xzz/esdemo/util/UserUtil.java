@@ -87,7 +87,7 @@ public class UserUtil {
      *
      * @return
      */
-    public static String getfourNum() { return String.valueOf(new Random().nextInt(9999-1000+1)+1000); }
+    public static String getfourNum() { return String.valueOf(new Random().nextInt(99999-10000+1)+10000); }
     /**
      * 随机生成男、女不同的姓名
      * */

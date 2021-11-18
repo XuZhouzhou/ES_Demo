@@ -5,6 +5,8 @@ import org.elasticsearch.action.search.SearchRequest;
 import org.elasticsearch.action.search.SearchResponse;
 import org.elasticsearch.client.RequestOptions;
 import org.elasticsearch.client.RestHighLevelClient;
+import org.elasticsearch.index.query.BoolQueryBuilder;
+import org.elasticsearch.index.query.QueryBuilder;
 import org.elasticsearch.index.query.QueryBuilders;
 import org.elasticsearch.search.SearchHit;
 import org.elasticsearch.search.SearchHits;
@@ -45,7 +47,12 @@ public class ES_Query {
         // 2. 条件查询 : termQuery
         SearchRequest request = new SearchRequest();
         request.indices("user");
-        request.source(new SearchSourceBuilder().query(QueryBuilders.termQuery("age", 20)));
+        BoolQueryBuilder queryBuilder= QueryBuilders.boolQuery();
+       // queryBuilder.must(QueryBuilders.termQuery("name.keyword", "单闫"));
+        //queryBuilder.must(QueryBuilders.termQuery("accountNumber.keyword", "15303564691"));
+        //queryBuilder.must(QueryBuilders.rangeQuery("age").gt(18).lt(20));
+       // request.source(new SearchSourceBuilder().query(QueryBuilders.termQuery("name", "欧阳鳐")));
+        request.source(new SearchSourceBuilder().query(queryBuilder));
         SearchResponse response = null;
         try {
             response = esClient.search(request, RequestOptions.DEFAULT);

@@ -8,6 +8,7 @@ import org.elasticsearch.client.RequestOptions;
 import org.elasticsearch.client.RestHighLevelClient;
 import org.elasticsearch.common.xcontent.XContentType;
 import org.xzz.esdemo.util.ES_Client_Util;
+import org.xzz.esdemo.util.PhoneUtil;
 import org.xzz.esdemo.util.UserUtil;
 
 import java.io.IOException;
@@ -19,7 +20,7 @@ public class ES_Insert {
         User user = null;
         ObjectMapper objectMapper=new ObjectMapper();
         try {
-            for (int i = 0; i <= 10; i++) {
+            for (int i = 0; i <= 10000; i++) {
                 //插入50条数据
                 IndexRequest indexRequest=new IndexRequest();
                 indexRequest.index("user").id(UserUtil.getfourNum());
@@ -27,7 +28,7 @@ public class ES_Insert {
                 user.setName(UserUtil.getChineseName());
                 user.setAge(UserUtil.getAge());
                 user.setSex(UserUtil.getSex());
-               // user.setAccountNumber("asdasdasdas");
+               user.setAccountNumber(PhoneUtil.getTel());
                 String userJson = objectMapper.writeValueAsString(user);
                 indexRequest.source(userJson, XContentType.JSON);
                 IndexResponse response = esClient.index(indexRequest, RequestOptions.DEFAULT);
