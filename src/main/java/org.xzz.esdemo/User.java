@@ -1,18 +1,13 @@
-package org.xzz.esdemo;
+package main.java.org.xzz.esdemo;
 
+/**
+ * @author Administrator
+ */
 public class User {
     private String name;
     private String sex;
     private Integer age;
     private String accountNumber;
-    public String getAccountNumber() {
-        return accountNumber;
-    }
-
-    public void setAccountNumber(String accountNumber) {
-        this.accountNumber = accountNumber;
-    }
-
 
     public String getName() {
         return name;
@@ -37,4 +32,13 @@ public class User {
     public void setAge(Integer age) {
         this.age = age;
     }
+
+    public String getAccountNumber() {
+        return accountNumber;
+    }
+
+    public void setAccountNumber(String accountNumber) {
+        this.accountNumber = accountNumber;
+    }
 }
+
