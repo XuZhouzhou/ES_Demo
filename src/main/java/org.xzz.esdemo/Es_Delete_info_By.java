@@ -1,5 +1,6 @@
-package org.xzz.esdemo;
+package main.java.org.xzz.esdemo;
 
+import main.java.org.xzz.esdemo.util.ES_Client_Util;
 import org.apache.lucene.search.TermQuery;
 import org.elasticsearch.action.ActionListener;
 import org.elasticsearch.action.support.IndicesOptions;
@@ -10,9 +11,7 @@ import org.elasticsearch.index.query.BoolQueryBuilder;
 import org.elasticsearch.index.query.QueryBuilders;
 import org.elasticsearch.index.query.TermQueryBuilder;
 import org.elasticsearch.index.reindex.BulkByScrollResponse;
-import org.elasticsearch.index.reindex.DeleteByQueryAction;
 import org.elasticsearch.index.reindex.DeleteByQueryRequest;
-import org.xzz.esdemo.util.ES_Client_Util;
 
 import static org.elasticsearch.index.query.QueryBuilders.termQuery;
 
@@ -20,8 +19,8 @@ public class Es_Delete_info_By {
     private static String index = "user";
 
     public static void main(String[] args) {
-        BoolQueryBuilder must = QueryBuilders.boolQuery().must(termQuery("name.keyword", "单闫"))
-                .must(termQuery("accountNumber.keyword", "15303564691"));
+        BoolQueryBuilder must = QueryBuilders.boolQuery().must(termQuery("name.keyword", "谷梁捻"))
+                ;
         //准备request对象
         DeleteByQueryRequest request =
                 //在一组索引上创建DeleteByQueryRequest。

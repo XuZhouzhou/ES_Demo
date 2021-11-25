@@ -1,8 +1,11 @@
-package org.xzz.esdemo.util;
+package main.java.org.xzz.esdemo.util;
 
 import java.io.UnsupportedEncodingException;
 import java.util.Random;
 
+/**
+ * @author Administrator
+ */
 public class UserUtil {
     public static String getChineseName() {
         String str = null;
