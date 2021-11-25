@@ -1,4 +1,4 @@
-package org.xzz.esdemo;
+package main.java.org.xzz.esdemo;
 
 
 import main.java.org.xzz.esdemo.util.ES_Client_Util;
@@ -49,7 +49,8 @@ public class ES_Query {
         BoolQueryBuilder queryBuilder= QueryBuilders.boolQuery();
        // queryBuilder.must(QueryBuilders.termQuery("name.keyword", "单闫"));
         //queryBuilder.must(QueryBuilders.termQuery("accountNumber.keyword", "15303564691"));
-        queryBuilder.must(QueryBuilders.rangeQuery("age").gte(18).lte(18));
+        queryBuilder.must(QueryBuilders.rangeQuery("age").gte(18));
+        queryBuilder.must(QueryBuilders.rangeQuery("age").lte(20));
        // request.source(new SearchSourceBuilder().query(QueryBuilders.termQuery("name", "欧阳鳐")));
 
         request.source(new SearchSourceBuilder().query(queryBuilder));
